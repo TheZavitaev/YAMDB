@@ -1,5 +1,7 @@
-[![yamdb Actions status](https://github.com/TheZavitaev/yamdb_final/workflows/yamdb/badge.svg)](https://github.com/TheZavitaev/yamdb_final/actions)
 ![YAMDB banner](/static/banner.jpg)
+
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![Yamdb-final-workflow](https://github.com/TheZavitaev/yamdb_final/workflows/Yamdb-final-workflow/badge.svg)](https://github.com/TheZavitaev/yamdb_final/actions)
 
 # REST API для сервиса YaMDb — базы отзывов о фильмах, книгах и музыке. (Совместный проект студентов Яндекс.Практикум)
 
