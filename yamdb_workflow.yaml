@@ -23,7 +23,7 @@ jobs:
         pip install -r requirements.txt
         
     - name: Lint with flake8
-      run: flake8 . --config=setup.cfg
+      run: flake8 .
 
     - name: Test with pytest
       run: pytest
@@ -59,11 +59,11 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.ROOT_NAME }}
-          password: ${{ secrets.ROOT_PASS }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo docker rmi thezavitaev/yamdb -f
-            sudo docker pull thezavitaev/yamdb:latest
+            cd yamdb
+            sudo docker-compose pull web
             sudo docker-compose up --force-recreate -d web
 
   send_message:

@@ -1,4 +1,5 @@
-![YAMDB banner](/static/%D0%91%D0%B5%D0%B7%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-1.jpg)
+![yamdb_workflow](https://github.com/TheZavitaev/yamdb_final/workflows/.github/workflows/yamdb_workflow.yaml/badge.svg)
+![YAMDB banner](/static/banner.jpg)
 
 # REST API для сервиса YaMDb — базы отзывов о фильмах, книгах и музыке. (Совместный проект студентов Яндекс.Практикум)
 
@@ -31,13 +32,17 @@ docker-compose exec web bash
 ```
 python manage.py migrate
 ```
+Собираем статику:
+```
+yamdb_web_1 python manage.py collectstatic --no-input
+```
 Создаем суперюзера:
 ```
-python manage.py createsuperuser
+yamdb_web_1 python manage.py createsuperuser
 ```
 Загружаем в базу тестовые данные:
 ```
-python manage.py loaddata fixtures.json
+yamdb_web_1 python manage.py loaddata fixtures.json
 ```
 Остановить работу и удалить контейнеры можно командой:
 ```
@@ -73,5 +78,6 @@ docker-compose down
 
 **[Владимир Самородов](https://github.com/Jejevkin)**.  Категории, жанры и произведения: модели, view и эндпойнты для них.
 
-**[Олег Завитаев](https://github.com/TheZavitaev)**. Отзывы и комментарии: модели и view, эндпойнты, права доступа для запросов. Рейтинги произведений.
+**[Олег Завитаев](https://github.com/TheZavitaev)**. Отзывы и комментарии: модели и view, эндпойнты, права доступа для запросов. Рейтинги произведений. CI\CD.
+
 
