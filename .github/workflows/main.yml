@@ -79,8 +79,8 @@ jobs:
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.SSH_KEY }}
           source: "./.env, nginx/default.conf, ./docker-compose.yaml"
           target: "code"
 
