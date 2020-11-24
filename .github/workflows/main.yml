@@ -92,6 +92,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            cd /home/thezavitaev/code
             sudo docker rmi thezavitaev/yamdb -f
             sudo docker pull thezavitaev/yamdb:latest
             sudo docker-compose up --force-recreate -d web
