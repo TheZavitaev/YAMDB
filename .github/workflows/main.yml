@@ -81,6 +81,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{ secrets.SSH_KEY }}
+          port: 22
           source: "./.env, nginx/default.conf, ./docker-compose.yaml"
           target: "/home/thezavitaev/code"
 
