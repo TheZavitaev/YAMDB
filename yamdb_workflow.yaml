@@ -77,9 +77,10 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
-          password: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
           source: "./.env, nginx/default.conf, ./docker-compose.yaml"
-          target: "code"
+          target: "/home/thezavitaev/code"
 
       - name: Executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
