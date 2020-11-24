@@ -86,7 +86,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
-          password: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           script: |
             sudo docker rmi thezavitaev/yamdb -f
             sudo docker pull thezavitaev/yamdb:latest
