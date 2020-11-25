@@ -14,7 +14,7 @@ services:
     image: thezavitaev/yamdb:latest
     restart: always
     volumes:
-      - ./static_volume:/static/
+      - ./static_volume:/code/static
     depends_on:
       - db
     env_file:
